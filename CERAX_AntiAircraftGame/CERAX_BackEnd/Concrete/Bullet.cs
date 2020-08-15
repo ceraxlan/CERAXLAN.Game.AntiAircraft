@@ -13,7 +13,7 @@ namespace CERAX_BackEnd.Concrete
         public Bullet(Size movementAreaSize, int CastleMiddle) : base(movementAreaSize)
         {
             SetLocationBullet(CastleMiddle);
-            MovementDistance = (int)(Height * 1.5);
+            MovementDistance = (int)(Height * 0.5);
         }
 
         private void SetLocationBullet(int CastleMiddle)

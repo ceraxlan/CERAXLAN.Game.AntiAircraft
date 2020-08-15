@@ -4,3 +4,9 @@ C:\Users\CERASLAN\Documents\GitHub\CERAX_AntiAircraftGame\CERAX_AntiAircraftGame
 C:\Users\CERASLAN\Documents\GitHub\CERAX_AntiAircraftGame\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.csproj.CoreCompileInputs.cache
 C:\Users\CERASLAN\Documents\GitHub\CERAX_AntiAircraftGame\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.dll
 C:\Users\CERASLAN\Documents\GitHub\CERAX_AntiAircraftGame\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.pdb
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\bin\Debug\CERAX_BackEnd.dll
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\bin\Debug\CERAX_BackEnd.pdb
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.csprojAssemblyReference.cache
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.dll
+C:\Users\CERASLAN\Documents\GitHub\CERAX_G_AntiAircraft\CERAX_AntiAircraftGame\CERAX_BackEnd\obj\Debug\CERAX_BackEnd.pdb

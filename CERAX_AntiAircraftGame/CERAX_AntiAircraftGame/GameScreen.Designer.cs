@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.pGameSettings = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,11 +37,9 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.pCastleArea = new System.Windows.Forms.Panel();
             this.pGameArea = new System.Windows.Forms.Panel();
-            this.Castle = new System.Windows.Forms.PictureBox();
             this.pGameSettings.SuspendLayout();
-            this.pGameArea.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Castle)).BeginInit();
             this.SuspendLayout();
             // 
             // pGameSettings
@@ -158,26 +155,24 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // pCastleArea
+            // 
+            this.pCastleArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pCastleArea.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pCastleArea.Location = new System.Drawing.Point(0, 508);
+            this.pCastleArea.Name = "pCastleArea";
+            this.pCastleArea.Size = new System.Drawing.Size(1000, 50);
+            this.pCastleArea.TabIndex = 2;
+            // 
             // pGameArea
             // 
             this.pGameArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pGameArea.Controls.Add(this.Castle);
             this.pGameArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pGameArea.Location = new System.Drawing.Point(0, 0);
             this.pGameArea.Name = "pGameArea";
-            this.pGameArea.Size = new System.Drawing.Size(1000, 558);
-            this.pGameArea.TabIndex = 1;
-            // 
-            // Castle
-            // 
-            this.Castle.BackColor = System.Drawing.Color.Transparent;
-            this.Castle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Castle.BackgroundImage")));
-            this.Castle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Castle.Location = new System.Drawing.Point(476, 511);
-            this.Castle.Name = "Castle";
-            this.Castle.Size = new System.Drawing.Size(50, 44);
-            this.Castle.TabIndex = 0;
-            this.Castle.TabStop = false;
+            this.pGameArea.Size = new System.Drawing.Size(1000, 508);
+            this.pGameArea.TabIndex = 3;
+            this.pGameArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pGameArea_MouseClick);
             // 
             // GameScreen
             // 
@@ -185,14 +180,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.pGameArea);
+            this.Controls.Add(this.pCastleArea);
             this.Controls.Add(this.pGameSettings);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Name = "GameScreen";
             this.Size = new System.Drawing.Size(1000, 600);
             this.pGameSettings.ResumeLayout(false);
             this.pGameSettings.PerformLayout();
-            this.pGameArea.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Castle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,7 +194,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pGameSettings;
-        private System.Windows.Forms.Panel pGameArea;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblScore;
@@ -209,6 +202,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox Castle;
+        private System.Windows.Forms.Panel pCastleArea;
+        private System.Windows.Forms.Panel pGameArea;
     }
 }

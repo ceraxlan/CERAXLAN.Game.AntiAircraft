@@ -49,6 +49,9 @@
     <Compile Include="Concrete\Bullet.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Concrete\Castle.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Concrete\Game.cs" />
     <Compile Include="Concrete\Jet.cs">
       <SubType>Component</SubType>

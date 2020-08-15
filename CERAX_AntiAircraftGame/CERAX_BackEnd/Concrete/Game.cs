@@ -12,14 +12,17 @@ namespace CERAX_BackEnd.Concrete
     public class Game : IGame
     {
 
-        #region Alanlar
+        #region Fields
 
        
         private readonly Timer _movementTimer = new Timer { Interval = 50 };
         private readonly Timer _createJetTimer = new Timer { Interval = 3000 };
       
         private readonly Panel _gameAreaPanel;
-       
+        private readonly Panel _castleAreaPanel;
+        private readonly Cursor _targetCursor;
+
+        private Castle _castle;
         private readonly List<Bullet> _bullets = new List<Bullet>();
         private readonly List<Jet> _jets = new List<Jet>();
 
@@ -27,20 +30,20 @@ namespace CERAX_BackEnd.Concrete
 
         #endregion
 
-
-        #region Özellikler
+        #region Specifications
 
         public bool IsContinue { get; private set; }
 
 
         #endregion
 
-        #region Metotlar
+        #region Methods
 
-        public Game(Panel gameAreaPanel)
+        public Game(Panel gameAreaPanel,Panel castleAreaPanel)
         {
            
             _gameAreaPanel = gameAreaPanel;
+            _castleAreaPanel = castleAreaPanel;
 
            
             _movementTimer.Tick += MovementTimer_Tick;
@@ -114,19 +117,24 @@ namespace CERAX_BackEnd.Concrete
             }
         }
 
+        
         public void Start()
         {
             if (IsContinue) return;
 
             IsContinue = true;
-           // _gameAreaPanel.Controls.Clear();
+            _gameAreaPanel.Controls.Clear();
             _heartCount = 3;
             StartTimers();
-           
+            CreateCastle();
             CreateJet();
         }
 
-        
+        private void CreateCastle()
+        {
+            _castle = new Castle(_castleAreaPanel.Width);
+            _castleAreaPanel.Controls.Add(_castle);
+        }
 
         private void CreateJet()
         {
@@ -161,9 +169,9 @@ namespace CERAX_BackEnd.Concrete
         {
             if (!IsContinue) return;
 
-           // var bullet = new Bullet(_gameAreaPanel.Size, _ucaksavar.Center);
-           // _bullets.Add(bullet);
-           // _gameAreaPanel.Controls.Add(bullet);
+            var bullet = new Bullet(_gameAreaPanel.Size, _castle.Left);
+            _bullets.Add(bullet);
+            _gameAreaPanel.Controls.Add(bullet);
         }
 
        

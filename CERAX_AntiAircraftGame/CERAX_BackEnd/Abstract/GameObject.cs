@@ -55,22 +55,21 @@ namespace CERAX_BackEnd.Abstract
                 case Direction.Up:
                     return MoveUp();
                 case Direction.Right:
-                    return MoveRight();
-                case Direction.Down:
-                    return MoveDown();
+                    return MoveRight();               
                 default:
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }
 
+        
         private bool MoveRight()
         {
             if (Right == MovementAreaSize.Width) return true;
 
-            var yeniRight = Right + MovementDistance;
-            var tasacakMi = yeniRight > MovementAreaSize.Width;
+            var newRight = Right + MovementDistance;
+            var overflow = newRight > MovementAreaSize.Width;
 
-            Right = tasacakMi ? MovementAreaSize.Width : yeniRight;
+            Right = overflow ? MovementAreaSize.Width : newRight;
 
             return Right == MovementAreaSize.Width;
         }
@@ -86,16 +85,9 @@ namespace CERAX_BackEnd.Abstract
             return Top == 0;
         }
 
-        private bool MoveDown()
+        private bool MoveToTarget(int X ,int Y)
         {
-            if (Bottom == MovementAreaSize.Height) return true;
-
-            var yeniBottom = Bottom + MovementDistance;
-            var tasacakMi = yeniBottom > MovementAreaSize.Height;
-
-            Bottom = tasacakMi ? MovementAreaSize.Height : yeniBottom;
-
-            return Bottom == MovementAreaSize.Height;
+            return false;
         }
 
     }

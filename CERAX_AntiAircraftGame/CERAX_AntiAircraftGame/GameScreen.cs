@@ -19,7 +19,7 @@ namespace CERAX_AntiAircraftGame
         {
             xMain = main;
             InitializeComponent();
-            _game = new Game(pGameArea);
+            _game = new Game(pGameArea, pCastleArea);
             
         }
 
@@ -31,6 +31,11 @@ namespace CERAX_AntiAircraftGame
         private void btnStart_Click(object sender, EventArgs e)
         {
             _game.Start();
+        }
+
+        private void pGameArea_MouseClick(object sender, MouseEventArgs e)
+        {
+            _game.Fire();
         }
     }
 }
