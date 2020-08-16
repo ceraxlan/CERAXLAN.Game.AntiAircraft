@@ -25,6 +25,7 @@ namespace CERAX_BackEnd.Concrete
         private int _score = 0;
 
         private Castle _castle;
+        private bool _isContinue = false;
         private readonly List<Bullet> _bullets = new List<Bullet>();
         private readonly List<Jet> _jets = new List<Jet>();
 
@@ -34,12 +35,33 @@ namespace CERAX_BackEnd.Concrete
 
         #region Specifications
 
-        public bool IsContinue { get; private set; }
+        public bool IsContinue
+        { 
+            get => _isContinue;
+            private set
+            {
+                _isContinue = value;
+                if (!_isContinue) { GameOver?.Invoke(this, EventArgs.Empty); }
+            }
+        }
 
+        public int Score
+        {
+            get => _score;
+            private set
+            {
+                _score = value;
+                UpdateScore?.Invoke(this, EventArgs.Empty);
+            }
+             
+
+        }
 
         #endregion
 
         #region Methods
+        public event EventHandler UpdateScore;
+        public event EventHandler GameOver;
 
         public Game(Panel gameAreaPanel,Panel castleAreaPanel)
         {
@@ -70,6 +92,7 @@ namespace CERAX_BackEnd.Concrete
                 var hittingBullet = jet.IsCrash(_bullets);
                 if (hittingBullet is null) continue;
 
+                Score++;
                 _jets.Remove(jet);
                 _bullets.Remove(hittingBullet);
                 _gameAreaPanel.Controls.Remove(jet);
@@ -125,11 +148,19 @@ namespace CERAX_BackEnd.Concrete
             if (IsContinue) return;
 
             IsContinue = true;
-            _gameAreaPanel.Controls.Clear();
-            _heartCount = 3;
+            ClearGame();
             StartTimers();
             CreateCastle();
             CreateJet();
+        }
+
+        private void ClearGame()
+        {
+            _gameAreaPanel.Controls.Clear();
+            _bullets.Clear();
+            _jets.Clear();
+            Score = 0;
+            _heartCount = 3;
         }
 
         private void CreateCastle()

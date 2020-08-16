@@ -15,12 +15,15 @@ namespace CERAX_AntiAircraftGame
     {
         XMain xMain;
         private readonly Game _game;
+        private int _highScore = 0;
         public GameScreen(XMain main)
         {
             xMain = main;
             InitializeComponent();
             _game = new Game(pGameArea, pCastleArea);
-            
+            _game.UpdateScore += UpdateScore;
+            _game.GameOver += GameOver;
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,7 +33,10 @@ namespace CERAX_AntiAircraftGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            _game.Start();
+            if (_game.IsContinue) return;
+            btnStart.Text = "Started";
+            btnMark.Text = "X";
+            _game.Start();           
         }
 
        
@@ -39,6 +45,23 @@ namespace CERAX_AntiAircraftGame
         {           
             Point target = pGameArea.PointToClient(Cursor.Position);
             _game.Fire(target);
+        }
+
+        private void UpdateScore(object sender, EventArgs e)
+        {
+            int score = _game.Score;
+            lblScore.Text = score.ToString();
+            if(score > _highScore) 
+            { 
+                _highScore = score; 
+                lblHighScore.Text = _highScore.ToString();
+            }
+                      
+        }
+        private void GameOver(object sender,EventArgs e)
+        {
+            btnMark.Text = "Game Over";
+            btnStart.Text = "Restart";
         }
     }
 }

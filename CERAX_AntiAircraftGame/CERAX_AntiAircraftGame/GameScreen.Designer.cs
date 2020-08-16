@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.pGameSettings = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblHighScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
@@ -39,13 +38,14 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pCastleArea = new System.Windows.Forms.Panel();
             this.pGameArea = new System.Windows.Forms.Panel();
+            this.btnMark = new System.Windows.Forms.Button();
             this.pGameSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // pGameSettings
             // 
-            this.pGameSettings.Controls.Add(this.label4);
-            this.pGameSettings.Controls.Add(this.label1);
+            this.pGameSettings.Controls.Add(this.btnMark);
+            this.pGameSettings.Controls.Add(this.lblHighScore);
             this.pGameSettings.Controls.Add(this.label2);
             this.pGameSettings.Controls.Add(this.btnExit);
             this.pGameSettings.Controls.Add(this.btnStart);
@@ -58,35 +58,23 @@
             this.pGameSettings.Size = new System.Drawing.Size(1000, 42);
             this.pGameSettings.TabIndex = 0;
             // 
-            // label4
+            // lblHighScore
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(481, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 41);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "X";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(646, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 27);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "0";
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.BackColor = System.Drawing.Color.Transparent;
+            this.lblHighScore.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Location = new System.Drawing.Point(689, 10);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(26, 27);
+            this.lblHighScore.TabIndex = 6;
+            this.lblHighScore.Text = "0";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(563, 10);
+            this.label2.Location = new System.Drawing.Point(606, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 27);
             this.label2.TabIndex = 5;
@@ -127,7 +115,7 @@
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
             this.lblScore.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(417, 10);
+            this.lblScore.Location = new System.Drawing.Point(362, 11);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(26, 27);
             this.lblScore.TabIndex = 4;
@@ -138,7 +126,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(329, 10);
+            this.label3.Location = new System.Drawing.Point(274, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 27);
             this.label3.TabIndex = 3;
@@ -177,6 +165,22 @@
             this.pGameArea.TabIndex = 3;
             this.pGameArea.Click += new System.EventHandler(this.pGameArea_Click);
             // 
+            // btnMark
+            // 
+            this.btnMark.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnMark.FlatAppearance.BorderSize = 0;
+            this.btnMark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMark.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMark.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnMark.Location = new System.Drawing.Point(421, 9);
+            this.btnMark.Name = "btnMark";
+            this.btnMark.Size = new System.Drawing.Size(159, 32);
+            this.btnMark.TabIndex = 7;
+            this.btnMark.Text = "X";
+            this.btnMark.UseVisualStyleBackColor = true;
+            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,10 +206,10 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHighScore;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel pCastleArea;
         private System.Windows.Forms.Panel pGameArea;
+        private System.Windows.Forms.Button btnMark;
     }
 }
