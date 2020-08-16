@@ -20,8 +20,7 @@ namespace CERAX_BackEnd.Concrete
         private readonly Timer _createJetTimer = new Timer { Interval = 2000 };
       
         private readonly Panel _gameAreaPanel;
-        private readonly Panel _castleAreaPanel;
-        private readonly Cursor _targetCursor;
+        private readonly Panel _castleAreaPanel;     
         private int _score = 0;
 
         private Castle _castle;
@@ -35,6 +34,15 @@ namespace CERAX_BackEnd.Concrete
 
         #region Specifications
 
+        public int HeartCount
+        {
+            get => _heartCount;
+            private set
+            {
+                _heartCount = value;
+                HeartCounter?.Invoke(this, EventArgs.Empty); 
+            }
+        }
         public bool IsContinue
         { 
             get => _isContinue;
@@ -62,6 +70,7 @@ namespace CERAX_BackEnd.Concrete
         #region Methods
         public event EventHandler UpdateScore;
         public event EventHandler GameOver;
+        public event EventHandler HeartCounter;
 
         public Game(Panel gameAreaPanel,Panel castleAreaPanel)
         {
@@ -111,8 +120,8 @@ namespace CERAX_BackEnd.Concrete
                 {
                     _jets.Remove(jet);
                     _gameAreaPanel.Controls.Remove(jet);
-                    _heartCount--;
-                    if (_heartCount == 0)
+                    HeartCount--;
+                    if (HeartCount == 0)
                     {
                         Finish();
                         break;
@@ -160,7 +169,7 @@ namespace CERAX_BackEnd.Concrete
             _bullets.Clear();
             _jets.Clear();
             Score = 0;
-            _heartCount = 3;
+            HeartCount = 3;
         }
 
         private void CreateCastle()

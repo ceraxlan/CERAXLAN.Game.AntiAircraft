@@ -23,6 +23,7 @@ namespace CERAX_AntiAircraftGame
             _game = new Game(pGameArea, pCastleArea);
             _game.UpdateScore += UpdateScore;
             _game.GameOver += GameOver;
+            _game.HeartCounter += HeartCounter;
 
         }
 
@@ -62,6 +63,23 @@ namespace CERAX_AntiAircraftGame
         {
             btnMark.Text = "Game Over";
             btnStart.Text = "Restart";
+        }
+       
+        private void HeartCounter(object sender, EventArgs e)
+        {
+            switch (_game.HeartCount)
+            {
+                case 3:
+                    btnMark.Text = "X X X";
+                    break;
+                case 2:
+                    btnMark.Text = "X X";
+                    break;
+                case 1:
+                    btnMark.Text = "X";
+                    break;
+            }
+
         }
     }
 }

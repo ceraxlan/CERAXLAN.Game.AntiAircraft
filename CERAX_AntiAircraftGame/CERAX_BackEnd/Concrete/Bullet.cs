@@ -13,10 +13,9 @@ namespace CERAX_BackEnd.Concrete
         public Bullet(Size movementAreaSize, int CastleMiddle,Point pointTarget) : base(movementAreaSize)
         {
             SetLocationBullet(CastleMiddle);
-            BulletMovementDistanceX = (int)((pointTarget.X - CastleMiddle) / 50);
-            BulletMovementDistanceY = (int)((500 - pointTarget.Y) / 50);
-           // BulletMovementDistanceY = 5;
-            //MovementDistance = (int)(Height * 0.5);
+            BulletMovementDistanceX = (int)((pointTarget.X - CastleMiddle) / 30);
+           // BulletMovementDistanceY = (int)((500 - pointTarget.Y) / 50);
+            BulletMovementDistanceY = Height;           
         }
 
         private void SetLocationBullet(int CastleMiddle)

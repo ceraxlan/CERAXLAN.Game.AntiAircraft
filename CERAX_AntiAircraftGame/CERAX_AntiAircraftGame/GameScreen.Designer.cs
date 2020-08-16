@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pGameSettings = new System.Windows.Forms.Panel();
+            this.btnMark = new System.Windows.Forms.Button();
             this.lblHighScore = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.pCastleArea = new System.Windows.Forms.Panel();
             this.pGameArea = new System.Windows.Forms.Panel();
-            this.btnMark = new System.Windows.Forms.Button();
             this.pGameSettings.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,22 @@
             this.pGameSettings.Name = "pGameSettings";
             this.pGameSettings.Size = new System.Drawing.Size(1000, 42);
             this.pGameSettings.TabIndex = 0;
+            // 
+            // btnMark
+            // 
+            this.btnMark.Cursor = System.Windows.Forms.Cursors.No;
+            this.btnMark.FlatAppearance.BorderSize = 0;
+            this.btnMark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMark.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMark.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnMark.Location = new System.Drawing.Point(421, 9);
+            this.btnMark.Name = "btnMark";
+            this.btnMark.Size = new System.Drawing.Size(159, 32);
+            this.btnMark.TabIndex = 7;
+            this.btnMark.Text = "X";
+            this.btnMark.UseVisualStyleBackColor = true;
             // 
             // lblHighScore
             // 
@@ -147,6 +163,7 @@
             // 
             // pCastleArea
             // 
+            this.pCastleArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
             this.pCastleArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pCastleArea.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pCastleArea.Location = new System.Drawing.Point(0, 508);
@@ -156,6 +173,7 @@
             // 
             // pGameArea
             // 
+            this.pGameArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(9)))));
             this.pGameArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pGameArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pGameArea.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -164,22 +182,6 @@
             this.pGameArea.Size = new System.Drawing.Size(1000, 508);
             this.pGameArea.TabIndex = 3;
             this.pGameArea.Click += new System.EventHandler(this.pGameArea_Click);
-            // 
-            // btnMark
-            // 
-            this.btnMark.Cursor = System.Windows.Forms.Cursors.No;
-            this.btnMark.FlatAppearance.BorderSize = 0;
-            this.btnMark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMark.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMark.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnMark.Location = new System.Drawing.Point(421, 9);
-            this.btnMark.Name = "btnMark";
-            this.btnMark.Size = new System.Drawing.Size(159, 32);
-            this.btnMark.TabIndex = 7;
-            this.btnMark.Text = "X";
-            this.btnMark.UseVisualStyleBackColor = true;
             // 
             // GameScreen
             // 

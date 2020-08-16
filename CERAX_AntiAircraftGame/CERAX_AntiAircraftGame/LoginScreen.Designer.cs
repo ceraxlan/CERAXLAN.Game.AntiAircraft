@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.timerPBar = new System.Windows.Forms.Timer(this.components);
             this.PBar = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -63,12 +64,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(529, 228);
+            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(552, 240);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 27);
+            this.label3.Size = new System.Drawing.Size(80, 24);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Studios";
+            this.label3.Text = "Studio";
             // 
             // timerPBar
             // 
@@ -88,13 +89,25 @@
             this.PBar.TabIndex = 3;
             this.PBar.Value = 0;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(524, 221);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 24);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Home";
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.PBar);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.PBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timerPBar;
         private Bunifu.Framework.UI.BunifuProgressBar PBar;
+        private System.Windows.Forms.Label label4;
     }
 }

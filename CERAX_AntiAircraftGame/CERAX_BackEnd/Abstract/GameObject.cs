@@ -76,28 +76,18 @@ namespace CERAX_BackEnd.Abstract
             return Right == MovementAreaSize.Width;
         }
 
-        private bool MoveUp()
-        {
-            if (Top == 0) return true;
-
-            var newTop = Top - MovementDistance;
-            var overflow = newTop < 0;
-            Top = overflow ? 0 : newTop;
-
-            return Top == 0;
-        }
 
         private bool MoveToTarget()
         {
             if ((Top == 0) || (Center == MovementAreaSize.Width) || (Center == 0)) return true;
 
                 var newTop = Top - BulletMovementDistanceY;
-                var overflow = newTop < 0;
-                Top = overflow ? 0 : newTop;
+                var overflowTop = newTop < 0;
+                Top = overflowTop ? 0 : newTop;
 
                 var newCenter = Center + BulletMovementDistanceX;
-                var overflow2 = newCenter > MovementAreaSize.Width || newCenter < 0;
-                Center = overflow2 ? MovementAreaSize.Width : newCenter;
+                var overflowSide = newCenter > MovementAreaSize.Width || newCenter < 0;
+                Center = overflowSide ? MovementAreaSize.Width : newCenter;
 
                 return (Top == 0) || (Center == MovementAreaSize.Width) || (Center == 0);          
         }
