@@ -13,20 +13,21 @@ namespace CERAX_BackEnd.Concrete
         private static readonly Random Random = new Random();
 
         public Jet(Size movementAreaSize) : base(movementAreaSize)
-        {
-            //MovementDistance = (int)(Width * .2);
-            MovementDistance = (int)((Random.Next(1,3)* Width) /8);
-            Top = Random.Next(movementAreaSize.Height - Height + 1);
+        {          
+            MovementDistance = (int)((Random.Next(1,3)* Width) /15);
+            Top = Random.Next(1, movementAreaSize.Height - 150);
         }
 
         public Bullet IsCrash(List<Bullet> bullets)
         {
             foreach (var bullet in bullets)
             {
-               var isCrash = bullet.Top <= Bottom && bullet.Right >= Left && bullet.Left <= Right;
-               if (isCrash) return bullet;
-            }
-           
+                //var strike = bullet.Top < Bottom && bullet.Right > Left && bullet.Left < Right;
+                var strike = bullet.Top > Top && bullet.Bottom < Bottom && bullet.Left > Left && bullet.Right < Right;
+                  
+
+               if (strike) return bullet;
+            }          
             return null;
         }
 

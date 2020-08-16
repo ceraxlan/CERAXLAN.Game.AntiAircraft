@@ -134,7 +134,7 @@ namespace CERAX_BackEnd.Concrete
 
         private void CreateJetTimer_Tick(object sender, EventArgs e)
         {
-            CreateJet();
+           if(_jets.Count<10) CreateJet();
         }
 
         private void MoveBullets()
