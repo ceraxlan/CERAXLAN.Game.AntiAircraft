@@ -2,6 +2,7 @@
 using CERAX_BackEnd.Interface;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,7 +109,7 @@ namespace CERAX_BackEnd.Concrete
             for (int i = _bullets.Count - 1; i >= 0; i--)
             {
                 var bullet = _bullets[i];
-                var collision = bullet.MoveIt(Direction.Up);
+                var collision = bullet.MoveIt(Direction.ToTarget);
                 if (collision)
                 {
                     _bullets.Remove(bullet);
@@ -165,11 +166,11 @@ namespace CERAX_BackEnd.Concrete
             _createJetTimer.Stop();
         }
 
-        public void Fire()
+        public void Fire(Point pointTarget)
         {
             if (!IsContinue) return;
 
-            var bullet = new Bullet(_gameAreaPanel.Size, _castle.Left);
+            var bullet = new Bullet(_gameAreaPanel.Size, _castle.Center(), pointTarget);
             _bullets.Add(bullet);
             _gameAreaPanel.Controls.Add(bullet);
         }

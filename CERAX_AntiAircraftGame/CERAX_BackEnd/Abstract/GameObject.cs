@@ -15,6 +15,8 @@ namespace CERAX_BackEnd.Abstract
         public Size MovementAreaSize { get; }
 
         public int MovementDistance { get; protected set; }
+        public int BulletMovementDistanceX { get; protected set; }
+        public int BulletMovementDistanceY { get; protected set; }
 
         public new int Right
         {
@@ -51,11 +53,11 @@ namespace CERAX_BackEnd.Abstract
         public bool MoveIt(Direction direction)
         {
             switch (direction)
-            {
-                case Direction.Up:
-                    return MoveUp();
+            {                
                 case Direction.Right:
-                    return MoveRight();               
+                    return MoveRight();
+                case Direction.ToTarget:
+                    return MoveToTarget();
                 default:
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
@@ -78,16 +80,26 @@ namespace CERAX_BackEnd.Abstract
         {
             if (Top == 0) return true;
 
-            var yeniTop = Top - MovementDistance;
-            var tasacakMi = yeniTop < 0;
-            Top = tasacakMi ? 0 : yeniTop;
+            var newTop = Top - MovementDistance;
+            var overflow = newTop < 0;
+            Top = overflow ? 0 : newTop;
 
             return Top == 0;
         }
 
-        private bool MoveToTarget(int X ,int Y)
+        private bool MoveToTarget()
         {
-            return false;
+            if ((Top == 0) || (Center == MovementAreaSize.Width) || (Center == 0)) return true;
+
+                var newTop = Top - BulletMovementDistanceY;
+                var overflow = newTop < 0;
+                Top = overflow ? 0 : newTop;
+
+                var newCenter = Center + BulletMovementDistanceX;
+                var overflow2 = newCenter > MovementAreaSize.Width || newCenter < 0;
+                Center = overflow2 ? MovementAreaSize.Width : newCenter;
+
+                return (Top == 0) || (Center == MovementAreaSize.Width) || (Center == 0);          
         }
 
     }

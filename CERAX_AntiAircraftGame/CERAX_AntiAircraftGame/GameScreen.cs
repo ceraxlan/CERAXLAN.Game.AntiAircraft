@@ -33,9 +33,12 @@ namespace CERAX_AntiAircraftGame
             _game.Start();
         }
 
-        private void pGameArea_MouseClick(object sender, MouseEventArgs e)
-        {
-            _game.Fire();
+       
+
+        private void pGameArea_Click(object sender, EventArgs e)
+        {           
+            Point target = pGameArea.PointToClient(Cursor.Position);
+            _game.Fire(target);
         }
     }
 }

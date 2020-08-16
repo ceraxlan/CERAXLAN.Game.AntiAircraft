@@ -94,6 +94,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,6 +109,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,13 +168,14 @@
             // 
             // pGameArea
             // 
-            this.pGameArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pGameArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pGameArea.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pGameArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pGameArea.Location = new System.Drawing.Point(0, 0);
             this.pGameArea.Name = "pGameArea";
             this.pGameArea.Size = new System.Drawing.Size(1000, 508);
             this.pGameArea.TabIndex = 3;
-            this.pGameArea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pGameArea_MouseClick);
+            this.pGameArea.Click += new System.EventHandler(this.pGameArea_Click);
             // 
             // GameScreen
             // 

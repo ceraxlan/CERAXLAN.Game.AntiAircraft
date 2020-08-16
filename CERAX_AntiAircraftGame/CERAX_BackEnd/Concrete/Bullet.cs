@@ -10,10 +10,13 @@ namespace CERAX_BackEnd.Concrete
 {
     internal class Bullet : GameObject
     {
-        public Bullet(Size movementAreaSize, int CastleMiddle) : base(movementAreaSize)
+        public Bullet(Size movementAreaSize, int CastleMiddle,Point pointTarget) : base(movementAreaSize)
         {
             SetLocationBullet(CastleMiddle);
-            MovementDistance = (int)(Height * 0.5);
+            BulletMovementDistanceX = (int)((pointTarget.X - CastleMiddle)/100);
+            BulletMovementDistanceY = (int)((500 - pointTarget.Y)/80);
+            
+            //MovementDistance = (int)(Height * 0.5);
         }
 
         private void SetLocationBullet(int CastleMiddle)

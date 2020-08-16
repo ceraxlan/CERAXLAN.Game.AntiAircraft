@@ -16,5 +16,10 @@ namespace CERAX_BackEnd.Concrete
             SizeMode = PictureBoxSizeMode.AutoSize;
             Left = (movementAreaSize / 2) - (Width / 2);
         }
+
+        public int Center()
+        {
+            return (Left + Right) / 2;
+        }
     }
 }

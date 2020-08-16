@@ -11,6 +11,7 @@ namespace CERAX_BackEnd.Enum
         Up,
         Right,
         Down,
-        Left
+        Left,
+        ToTarget
     }
 }
