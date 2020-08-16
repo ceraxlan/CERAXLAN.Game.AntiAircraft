@@ -14,7 +14,8 @@ namespace CERAX_BackEnd.Concrete
 
         public Jet(Size movementAreaSize) : base(movementAreaSize)
         {
-            MovementDistance = (int)(Width * .1);
+            //MovementDistance = (int)(Width * .2);
+            MovementDistance = (int)((Random.Next(1,3)* Width) /10);
             Top = Random.Next(movementAreaSize.Height - Height + 1);
         }
 

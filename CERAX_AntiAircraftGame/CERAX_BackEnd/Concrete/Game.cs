@@ -17,11 +17,12 @@ namespace CERAX_BackEnd.Concrete
 
        
         private readonly Timer _movementTimer = new Timer { Interval = 50 };
-        private readonly Timer _createJetTimer = new Timer { Interval = 3000 };
+        private readonly Timer _createJetTimer = new Timer { Interval = 2000 };
       
         private readonly Panel _gameAreaPanel;
         private readonly Panel _castleAreaPanel;
         private readonly Cursor _targetCursor;
+        private int _score = 0;
 
         private Castle _castle;
         private readonly List<Bullet> _bullets = new List<Bullet>();
