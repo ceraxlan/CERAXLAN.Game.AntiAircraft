@@ -14,7 +14,6 @@ namespace CERAX_BackEnd.Concrete
     {
 
         #region Fields
-
        
         private readonly Timer _movementTimer = new Timer { Interval = 50 };
         private readonly Timer _createJetTimer = new Timer { Interval = 2000 };
@@ -73,18 +72,14 @@ namespace CERAX_BackEnd.Concrete
         public event EventHandler HeartCounter;
 
         public Game(Panel gameAreaPanel,Panel castleAreaPanel)
-        {
-           
+        {          
             _gameAreaPanel = gameAreaPanel;
             _castleAreaPanel = castleAreaPanel;
-
-           
+          
             _movementTimer.Tick += MovementTimer_Tick;
             _createJetTimer.Tick += CreateJetTimer_Tick;
         }
-
       
-
         private void MovementTimer_Tick(object sender, EventArgs e)
         {
             MoveBullets();
@@ -97,7 +92,6 @@ namespace CERAX_BackEnd.Concrete
             for (var i = _jets.Count - 1; i >= 0; i--)
             {
                 var jet = _jets[i];
-
                 var hittingBullet = jet.IsCrash(_bullets);
                 if (hittingBullet is null) continue;
 

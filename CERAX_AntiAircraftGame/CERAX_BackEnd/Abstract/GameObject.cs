@@ -1,11 +1,7 @@
 ﻿using CERAX_BackEnd.Enum;
 using CERAX_BackEnd.Interface;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CERAX_BackEnd.Abstract
@@ -13,7 +9,6 @@ namespace CERAX_BackEnd.Abstract
     internal abstract class GameObject : PictureBox, IMoving
     {
         public Size MovementAreaSize { get; }
-
         public int MovementDistance { get; protected set; }
         public int BulletMovementDistanceX { get; protected set; }
         public int BulletMovementDistanceY { get; protected set; }
@@ -35,13 +30,7 @@ namespace CERAX_BackEnd.Abstract
             get => Left + Width / 2;
             set => Left = value - Width / 2;
         }
-
-        public int Middle
-        {
-            get => Top + Height / 2;
-            set => Top = value - Height / 2;
-        }
-
+       
         protected GameObject(Size movementAreaSize)
         {
             Image = Image.FromFile($@"Images\{GetType().Name}.png");
@@ -70,7 +59,6 @@ namespace CERAX_BackEnd.Abstract
 
             var newRight = Right + MovementDistance;
             var overflow = newRight > MovementAreaSize.Width;
-
             Right = overflow ? MovementAreaSize.Width : newRight;
 
             return Right == MovementAreaSize.Width;

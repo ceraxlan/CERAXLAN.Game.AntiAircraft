@@ -79,7 +79,6 @@ namespace CERAX_AntiAircraftGame
                     btnMark.Text = "X";
                     break;
             }
-
         }
     }
 }

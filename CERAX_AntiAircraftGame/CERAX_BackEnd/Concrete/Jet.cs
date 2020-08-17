@@ -21,11 +21,8 @@ namespace CERAX_BackEnd.Concrete
         public Bullet IsCrash(List<Bullet> bullets)
         {
             foreach (var bullet in bullets)
-            {
-                //var strike = bullet.Top < Bottom && bullet.Right > Left && bullet.Left < Right;
-                var strike = bullet.Top > Top && bullet.Bottom < Bottom && bullet.Left > Left && bullet.Right < Right;
-                  
-
+            {              
+               var strike = bullet.Top > Top && bullet.Bottom < Bottom && bullet.Left > Left && bullet.Right < Right;                 
                if (strike) return bullet;
             }          
             return null;
