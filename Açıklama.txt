@@ -1,0 +1,6 @@
+Oyun uçakları, yerde sabit olan uçaksavar kalesi tarafında atış yaparak vurma üzerinedir .
+Eğer uçaklar vurulmaz ise sınırı geçmektedir ve 
+kalenin gücünü azaltmaktadır .
+Kalenin 3 can hakkı vardır ,bunlar biterse oyun durmaktadır .
+
+Uçaklar rastgele hızlarda geçiş yapmaktalardır.

@@ -65,7 +65,7 @@
             this.btnMark.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnMark.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnMark.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMark.Font = new System.Drawing.Font("Lucida Handwriting", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMark.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMark.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnMark.Location = new System.Drawing.Point(421, 9);
             this.btnMark.Name = "btnMark";
@@ -78,10 +78,10 @@
             // 
             this.lblHighScore.AutoSize = true;
             this.lblHighScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblHighScore.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHighScore.Location = new System.Drawing.Point(689, 10);
             this.lblHighScore.Name = "lblHighScore";
-            this.lblHighScore.Size = new System.Drawing.Size(26, 27);
+            this.lblHighScore.Size = new System.Drawing.Size(24, 25);
             this.lblHighScore.TabIndex = 6;
             this.lblHighScore.Text = "0";
             // 
@@ -89,10 +89,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(606, 10);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 27);
+            this.label2.Size = new System.Drawing.Size(56, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "High";
             // 
@@ -102,7 +102,7 @@
             this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(919, 10);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(81, 32);
@@ -117,7 +117,7 @@
             this.btnStart.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Lucida Handwriting", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(0, 10);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(109, 32);
@@ -130,10 +130,10 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblScore.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.Location = new System.Drawing.Point(362, 11);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(26, 27);
+            this.lblScore.Size = new System.Drawing.Size(24, 25);
             this.lblScore.TabIndex = 4;
             this.lblScore.Text = "0";
             // 
@@ -141,10 +141,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(274, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 27);
+            this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Score";
             // 
@@ -175,7 +175,7 @@
             // 
             this.pGameArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(9)))));
             this.pGameArea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pGameArea.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.pGameArea.Cursor = System.Windows.Forms.Cursors.No;
             this.pGameArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pGameArea.Location = new System.Drawing.Point(0, 0);
             this.pGameArea.Name = "pGameArea";
