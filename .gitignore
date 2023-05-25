@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CERAX_AntiAircraftGame/.vs/CERAX_AntiAircraftGame
+/CERAX_AntiAircraftGame/CERAX_AntiAircraftGame/bin/Debug
+/CERAX_AntiAircraftGame/CERAX_AntiAircraftGame/obj/Debug
+/CERAX_AntiAircraftGame/CERAX_BackEnd/bin/Debug
+/CERAX_AntiAircraftGame/CERAX_BackEnd/obj/Debug
